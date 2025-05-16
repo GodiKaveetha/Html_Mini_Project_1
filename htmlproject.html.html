@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tourism Guide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .screen {
+            display: none;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        #screen1:checked~.home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+            color: white;
+        }
+
+        #screen2:checked~.tableScreen {
+            display: block;
+            background: #f5f5f5;
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/031/764/small/blue-wide-background-with-linear-blurred-gradient-free-vector.jpg");
+            background-size: cover;
+
+        }
+
+        #screen3:checked~.finalScreen {
+            display: block;
+            background: #fff;
+        }
+
+        .button {
+            background: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .place img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .place {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="radio" name="screens" id="screen1" checked />
+    <input type="radio" name="screens" id="screen2" />
+    <input type="radio" name="screens" id="screen3" />
+
+
+    <div class="screen home">
+        <h1>Tourism</h1>
+        <p>Plan your trip</p>
+        <label for="screen2" class="button">Get Started</label>
+    </div>
+
+    <div class="screen tableScreen">
+        <h2>Top Tourist Places in India</h2>
+        <ul type="square">
+            <li>Munnar, Kerala</li>
+            <li>Manali, Himachal Pradesh</li>
+            <li>Tajmahal, Uttar Pradesh</li>
+        </ul>
+
+        <h3>Let's Explore the Tourist Places Details</h3>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Place</th>
+                <th>State</th>
+                <th>Best time to visit</th>
+                <th>Temperature</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Munnar</td>
+                <td>Kerala</td>
+                <td>Oct–March</td>
+                <td>5°C - 25°C</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Manali</td>
+                <td>Himachal Pradesh</td>
+                <td>Mar–June</td>
+                <td>10°C - 25°C</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Taj Mahal</td>
+                <td>Uttar Pradesh</td>
+                <td>Oct–March</td>
+                <td>10°C - 25°C</td>
+            </tr>
+        </table>
+
+        <label for="screen3" class="button">Next</label>
+    </div>
+
+
+    <div class="screen finalScreen">
+        <h2 style="text-align:center">Tourist Spot</h2>
+
+        <div class="place">
+            <h3>1. Munnar</h3>
+            <img src="https://goaroundtheglobe.in/public/blog_images/1704969092.jpg" alt="Munnar" />
+            <p>
+                Munnar is a land of waterfalls and reservoirs. Of these, the major tourist attracting points include Mattupetty Dam, Kundala Dam Lake, Attukal Waterfalls and Chinnakanal Waterfalls. Other tourist spots for more splendid experiences include Top Station, Kalari Kshethra and Echo Point.
+            </p>
+        </div>
+
+        <div class="place">
+            <h3>2. Manali</h3>
+            <img src="https://www.tripplannersindia.com/assets/blog/images/placestovisitinmanali/Chandrakhani.webp" alt="Manali" />
+            <p>
+                Manali is often referred to as the "Valley of the Gods" and is nestled in the majestic Himalayas, showcasing the unparalleled creativity of nature. The town's snow-capped peaks, pure rivers, deep woods, and lush green valley's combine to create a visual symphony that truly tantalises the senses.
+
+            </p>
+        </div>
+
+        <div class="place">
+            <h3>3. Taj Mahal</h3>
+            <img src="https://cdn.getyourguide.com/img/tour/647ce592138df.jpeg/155.jpg" alt="Tajmahal" />
+            <p>
+                The Taj Mahal is famous for its exquisite beauty, architectural design, and profound historical significance. It's considered one of the most beautiful buildings ever constructed and a symbol of enduring love, commissioned by Mughal Emperor Shah Jahan in memory of his wife, Mumtaz Mahal. The mausoleum is a testament to artistic and scientific accomplishments of the Mughal Empire, and its beauty attracts millions of visitors annually.
+            </p>
+        </div>
+
+        <label for="screen1" class="button">Back to Start</label>
+    </div>
+
+</body>
+
+</html>
